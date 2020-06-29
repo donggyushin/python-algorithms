@@ -30,10 +30,6 @@ parenthese가 가장 첫번째로 나오는 닫아주는 parenthese가 되어지
 매칭될 게 없으니끼 당연히 False겠죠? 그리고 닫혀진 parenthesis와 열리진 parenthesis를 모두
 매칭시켜주었다면 stack이 비었는지 확인해주어야 합니다. stack이 비지 않았다면 False겠죠? 
 열어주는 parenthesis의 갯수가 더 많다는 뜻이니까요. 
-
-
-
-
 """
 
 
