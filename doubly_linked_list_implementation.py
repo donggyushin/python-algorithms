@@ -9,7 +9,8 @@ class DoublyLinkedListNode(object):
     def __init__(self, value):
         self.value = value
         """
-        더블 링크드 리스트는 싱글 링크드 리스트와는 다르게 자기 이후의 노드를 가리키는 next pointer도 있지만
+        더블 링크드 리스트는 싱글 링크드 리스트와는 다르게 자기 
+        이후의 노드를 가리키는 next pointer도 있지만
         자신의 이전 노드를 가리키는 prev pointer도 있습니다. 
         """
         self.next: DoublyLinkedListNode = None
