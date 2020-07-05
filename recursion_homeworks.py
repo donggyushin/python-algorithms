@@ -54,8 +54,6 @@ word_split('themanran', ['clown', 'man', 'ran']) -> []
 
 def word_split(phrase: str, list_of_words: List[str], output=None) -> str:
 
-    print(phrase)
-
     if output is None:
         output = []
 
