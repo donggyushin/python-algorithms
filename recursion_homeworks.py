@@ -43,7 +43,7 @@ Problem3
 
 string이랑 단어들로 이루어진 리스트를 인자로 받고, 전달받은 string 값이 두번째로 전달받은 
 리스트안에 들어있는 단어들에 의해서 완전하게 
-split 될 수 있는지 확인하는 함수를 작성하시오. 
+split 될 수 있는지 보여주는 확인하는 함수를 작성하시오. 
 
 For example
 word_split('themanran', ['the', 'man', 'ran', 'two']) -> ['the', 'man', 'ran']
@@ -54,9 +54,14 @@ word_split('themanran', ['clown', 'man', 'ran']) -> []
 
 def word_split(phrase: str, list_of_words: List[str], output=None) -> str:
 
+    # 우선 결과를 반환할 리스트인 output을 선언해준다. 하지만 재귀
+    # 함수이기 때문에, output이 없을때 딱 한번만 선언해준다.
     if output is None:
         output = []
 
+    # 리스트를 순회하면서 phrase에서 해당 단어로
+    # 시작하는 부분이 있다면 찾아내주고
+    # phrase에서 찾은 부분을 삭제해준다.
     for word in list_of_words:
 
         if phrase.startswith(word):
