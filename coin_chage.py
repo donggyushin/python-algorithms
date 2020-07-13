@@ -26,6 +26,13 @@ class TestCase(object):
         assert_equal(solution(74, coins), 8)
         print('PASSED ALL TESTS')
 
+    def test2(self, solution):
+        coins = [1, 5, 10, 25]
+        assert_equal(solution(45, coins, known_results), 3)
+        assert_equal(solution(23, coins, known_results), 5)
+        assert_equal(solution(74, coins, known_results), 8)
+        print('PASSED ALL TESTS')
+
 
 def rec_coin(target: int, coins: List[int]) -> int:
     # min_coins는 최종 결과값인데 우선은 target으로 셋팅해놈.
@@ -58,7 +65,7 @@ def rec_coin(target: int, coins: List[int]) -> int:
 
 target = 100
 coins = [1, 5, 10, 25]
-known_results = [0]*target + 1
+known_results = [0]*(target + 1)
 
 
 def rec_coin_dynam(target: int, coins: List[int], known_results) -> int:
@@ -89,4 +96,4 @@ def rec_coin_dynam(target: int, coins: List[int], known_results) -> int:
 
 t = TestCase()
 t.test(rec_coin)
-t.test(rec_coin_dynam)
+t.test2(rec_coin_dynam)
